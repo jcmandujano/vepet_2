@@ -1,0 +1,46 @@
+page-termscond {
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 50%; /* Set a small width */
+        height: auto;
+    }
+ 
+    .termscond-content {
+        background: #2f2e2e;
+    }
+    .terms-desc{
+        text-decoration: none;
+        color: #00a4ae;
+    }
+
+    .mt-neg{
+        margin-top: -12px;
+    }
+
+    .tit-view{
+        color: #00a4ae;
+    }
+
+    .ali-text{
+        text-align: justify;
+        color: #fff;
+    }
+
+    .submit-btn {
+        background: #00a4ae;
+        border: 1px solid #00a4ae;
+    }
+  
+    .toolbar-content-ios {
+        text-align: center;
+    }
+    
+    .toolbar-content-md {
+        text-align: center;
+    }
+  
+  }

@@ -1,0 +1,33 @@
+
+<ion-content padding >
+    <img class="logo" src="../../assets/imgs/LOGO1.png"/>
+
+      <ion-list class="login-form" no-lines>
+        <ion-item id="rounded">
+          <ion-input placeholder="nombre(s)" type="text" value="" [(ngModel)]="nombresInput"></ion-input>
+        </ion-item>
+        <ion-item id="rounded">
+          <ion-input placeholder="apellidos" type="text" value="" [(ngModel)]="apellidosInput"></ion-input>
+        </ion-item>
+        <ion-item id="rounded">
+            <ion-input placeholder="email" type="email" value="" [(ngModel)]="emailInput"></ion-input>
+          </ion-item>
+          <ion-item id="rounded">
+            <ion-input placeholder="password" type="password" value="" [(ngModel)]="passwordInput"></ion-input>
+          </ion-item>
+          <ion-item style="border: none !important;" class="check-item">
+            <ion-label style="white-space: normal;">Estoy de acuerdo con los terminos y condiciones.</ion-label>
+            <ion-checkbox color="dark"  [(ngModel)]="terminos" name="acceptTerm"></ion-checkbox>
+          </ion-item>
+      </ion-list>
+      <div class="loginButton">
+        <button ion-button round color="secondary" block (click)="registraUsuario()">Guardar</button>
+      </div>
+  
+      <div class="loginButton">
+        <button ion-button round color="secondary" block (click)="cancelar()" >Cancelar</button>
+      </div>
+
+      <button ion-button full color="secondary" class="but-opt mt-neg" clear (click)="abrirTerminos()">Terminos y condiciones</button>
+    
+  </ion-content>

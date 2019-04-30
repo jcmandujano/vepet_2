@@ -1,0 +1,41 @@
+page-registro {
+
+    ion-content{
+        background-image: url('../../assets/imgs/FONDO.png');
+        background-size: cover;
+    }
+
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 50%; /* Set a small width */
+        height: auto;
+    }
+
+    .login-form >*{
+        background-color: transparent;
+        color: white;
+    }
+
+    .loginButton{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #rounded {
+        margin-bottom: 10px;
+        border-radius: 25px;
+        border: 1px solid #fff;   
+    }
+
+    .unser-unique{
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        position: relative;
+    }
+
+}

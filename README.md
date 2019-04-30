@@ -1,2 +1,2 @@
-# vepet_2
-repositorio vepet
+# vepet
+proyecto vepet

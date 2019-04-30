@@ -1,0 +1,27 @@
+<ion-header>
+
+  </ion-header>
+  
+  <ion-content padding class="vertical-align-content">
+    <img class="logo" src="../../assets/imgs/LOGO1.png"/>
+    
+      <ion-list class="login-form" no-lines>
+        <ion-item id="rounded">
+          <ion-input placeholder="email" type="text" value="" [(ngModel)]="emailInput" #email></ion-input>
+        </ion-item>
+        <ion-item id="rounded">
+          <ion-input placeholder="password" type="password" value="" [(ngModel)]="passwordInput"  #password></ion-input>
+        </ion-item>
+      </ion-list>
+      <div class="loginButton">
+        <button ion-button round color="secondary" block (click)="logIn()">Accede</button>
+      </div>
+  
+      <div class="loginButton">
+        <button ion-button round color="secondary" block (click)="GoToSigninPage()" >Registrate</button>
+      </div>
+  
+      <button ion-button full color="secondary" class="but-opt mt-neg" clear (click)="openRecovery()">Recuperar contraseña</button>
+    
+  </ion-content>
+  

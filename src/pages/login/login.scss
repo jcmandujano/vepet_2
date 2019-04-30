@@ -1,0 +1,40 @@
+page-login {
+
+    ion-content{
+        background-image: url('../../assets/imgs/FONDO.png');
+        background-size: cover;
+    }
+
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 70px;
+        margin-bottom: 50px;
+        width: 70%; /* Set a small width */
+        height: auto;
+    }
+    
+    .vertical-align-content{
+        display: flex!important;
+        align-content: center!important;
+        align-items: center!important;
+    }
+
+    .login-form >*{
+        background-color: transparent;
+        color: white;
+    }
+
+   .loginButton{
+       margin-top: 20px;
+       margin-bottom: 20px;
+       border-radius: 15px;
+   }
+
+   #rounded {
+        margin-bottom: 10px;
+        border-radius: 25px;
+        border: 1px solid #fff;   
+    }
+}

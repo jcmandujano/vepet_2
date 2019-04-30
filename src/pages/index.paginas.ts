@@ -1,0 +1,10 @@
+export { TabsPage } from './tabs/tabs';
+export { LoginPage } from './login/login';
+export { MascotasPage } from './mascotas/mascotas';
+export { ConsultasPage } from './consultas/consultas';
+export { MedicosPage } from './medicos/medicos';
+export { EmergenciasPage }  from './emergencias/emergencias';
+export { RegistroPage }  from './registro/registro';
+export { TermsPage } from './terms/terms';
+export {VerMascotaPage} from './ver-mascota/ver-mascota';
+export { CreaMascotaPage} from './crea-mascota/crea-mascota';

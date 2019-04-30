@@ -1,0 +1,49 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+/*custom Ionicon icon*/
+
+.toolbar-background {
+    background: #16254c;
+}
+.toolbar-title-md{
+    color: white;
+}
+
+.toolbar-title-ios{
+    color: white;
+}
+
+.toolbar-title{
+    color: white;
+}
+
+//makes header bigger site wide on ionic serve
+ion-toolbar.toolbar {
+    min-height: 60px!important;
+}
+//on Android
+ion-toolbar.toolbar-md {
+    min-height: 60px!important;
+}
+//on iOS
+ion-toolbar.toolbar.toolbar-ios {
+    min-height: 60px!important;
+}
+
+tabs-md-background{
+    background: #000;
+}
