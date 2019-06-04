@@ -4,10 +4,6 @@ page-crea-mascota {
        -webkit-border-radius: 50%;
        border-radius: 50%;
    }
-   
-   .labelX{
-       text-align: center;
-   }
 
    .actionButton{
         margin-top: 20px;
@@ -15,8 +11,8 @@ page-crea-mascota {
     }
 
     .labelAddPet{
-        color: #7dd4f7;
-        font-size: 40px;
+        color: #fff;
+        font-size: 30px;
     }
 
     .inputAddPet{
@@ -26,9 +22,7 @@ page-crea-mascota {
         margin-top: 20px;
     }
 
-    .buttonAddPet{
-        font-size: 20px;
-    }
+    
 
     .closeButtonAddPet{
         position: absolute;
@@ -36,5 +30,16 @@ page-crea-mascota {
         left: 20px;
         font-size: 45px;
     }
+
+    .mainScroll{
+        background-color: #16254c;
+    }
+
+    .loginButton{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+    
 
 }

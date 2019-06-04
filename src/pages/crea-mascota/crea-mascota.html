@@ -1,20 +1,15 @@
 <ion-header>
     <ion-icon class="closeButtonAddPet" start name="md-close-circle" color="secondary" (click)="returnHome()"></ion-icon>
-  
-
 </ion-header>
-
-<ion-content padding >
-    
+<ion-content class="mainScroll" padding >
   <ion-slides pager>
-
     <ion-slide padding>
-      
       <h2 class="labelAddPet">¿Cómo se llama tu mascota?</h2>
       <ion-input class="inputAddPet" text-center placeholder="Nombre" type="text" value="" [(ngModel)]="nombreInput" ></ion-input>
-      <button class="buttonAddPet" ion-button round color="primary" block (click)="goToStep2()">Siguiente</button>
+      <div class="loginButton">
+        <button class="buttonAddPet" ion-button round color="secondary" block (click)="goToStep2()">Siguiente</button>
+      </div>
     </ion-slide>
-  
     <ion-slide>
       <h2>Slide 2</h2>
       <ion-list>
@@ -26,29 +21,10 @@
           </ion-item>
         </ion-list>
     </ion-slide>
-  
     <ion-slide>
-      <h2>Slide 3</h2>
+      <h2>Slidess 3</h2>
     </ion-slide>
-  
   </ion-slides>
-
-  <ion-slides pager>
-
-    <ion-slide padding>
-      <h2 class="labelAddMascota">¿Cómo se llama tu mascota?</h2>
-      <ion-input text-center placeholder="Nombre" type="text" value="" [(ngModel)]="nombreInput"></ion-input>
-      <button ion-button round color="primary" block>Siguiente</button>
-    </ion-slide>
-  
-    <ion-slide style="background-color: blue">
-      <h2>Slide 2</h2>
-    </ion-slide>
-  
-    <ion-slide style="background-color: red">
-      <h2>Slide 3</h2>
-    </ion-slide>
-  
-  </ion-slides>
+ 
     
 </ion-content>
