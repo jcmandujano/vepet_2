@@ -17,7 +17,7 @@
 /*custom Ionicon icon*/
 
 .toolbar-background {
-    background: #16254c;
+    background: white;
 }
 .toolbar-title-md{
     color: white;
@@ -47,3 +47,38 @@ ion-toolbar.toolbar.toolbar-ios {
 tabs-md-background{
     background: #000;
 }
+
+ion-icon {      
+    &[class*="custom-"] {
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        
+        width: 2em;
+        height: 2em;
+        }
+
+    &[class*="custom-noti"] {
+        mask-image: url(../assets/imgs/campanita.svg);
+        background: #16254c;
+        
+    }
+    &[class*="custom-menu"] {
+        mask-image: url(../assets/imgs/menu.svg);
+        background: #16254c;
+    }
+    &[class*="custom-calendar"] {
+        mask-image: url(../assets/imgs/calendar.svg);
+        background: white;
+    }
+}
+
+.logo-header img{
+    height: 2em;
+    padding-left: 1rem;
+  }
+
+  .ico-container{
+      background-color: transparent;
+  }
+  

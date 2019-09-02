@@ -14,7 +14,8 @@ import {TabsPage,
         RegistroPage,
         TermsPage, 
         VerMascotaPage,
-        CreaMascotaPage} from '../pages/index.paginas';
+        CreaMascotaPage,
+        HomePage} from '../pages/index.paginas';
 import { UserServiceProvider } from '../providers/user-service/user-service';
 import { HttpClientModule  } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
@@ -32,6 +33,7 @@ import { StorageProvider } from '../providers/storage/storage';
     RegistroPage,
     TermsPage,
     CreaMascotaPage,
+    HomePage,
     VerMascotaPage,
     LoginPage
   ],
@@ -54,6 +56,7 @@ import { StorageProvider } from '../providers/storage/storage';
     RegistroPage,
     TermsPage,
     CreaMascotaPage,
+    HomePage,
     VerMascotaPage,
     LoginPage
   ],

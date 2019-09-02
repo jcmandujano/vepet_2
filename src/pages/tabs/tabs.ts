@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import { MascotasPage, ConsultasPage, MedicosPage, EmergenciasPage } from '../index.paginas';
+import { MascotasPage, ConsultasPage, MedicosPage, EmergenciasPage, HomePage } from '../index.paginas';
 @IonicPage()
 @Component({
   selector: 'page-tabs',
@@ -20,7 +20,7 @@ export class TabsPage {
               public storage : Storage) {
     this.tab1 = MascotasPage;
     this.tab2 = ConsultasPage;
-    this.tab3 = MedicosPage;
+    this.tab3 = HomePage;
     this.tab4 = EmergenciasPage;
   }
 

@@ -8,3 +8,4 @@ export { RegistroPage }  from './registro/registro';
 export { TermsPage } from './terms/terms';
 export {VerMascotaPage} from './ver-mascota/ver-mascota';
 export { CreaMascotaPage} from './crea-mascota/crea-mascota';
+export {HomePage} from './home/home';
