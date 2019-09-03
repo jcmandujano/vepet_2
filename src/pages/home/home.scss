@@ -1,0 +1,204 @@
+page-home {
+    .metas-lista{
+        background-image: linear-gradient(to top right, #7dd4f7, #16254c);
+        -webkit-box-shadow: -1px 1px 5px 2px rgba(5, 8, 10, 0.28);
+        -moz-box-shadow: -1px 1px 5px 2px rgba(5, 8, 10, 0.28);
+        box-shadow: -1px 1px 5px 2px rgba(5, 8, 10, 0.28);
+    }
+
+    .cont-profile-pic-sel{
+        align-items: center;
+    }
+
+    .profile-pic-sel{
+        background-color: #fff;
+        width: 50%;
+        border-radius: 50%;
+    }
+    
+    .profile-pic-sel:after{
+        content: '';
+        width: 100%;
+        padding-top: 100%;
+        display: inline-block;
+    }
+
+    .txt-image-sel{
+        color: #fff;
+        align-items: center;
+    }
+    .txt-image-sel h3, .txt-image-sel p{
+        padding: 0;
+        margin: 0;
+        font-weight: 700;
+    }
+    
+    .txt-image-sel img{
+        width: 100%;
+    }
+
+    .programas-activos {
+        text-align: center;
+        color: white;
+        font-size: medium;
+        font-weight: 700;
+        border-bottom: 1px solid #ffffff80;
+        padding-bottom: .5rem;
+        margin-top: 0;
+    }
+
+    .lista-metas {
+        color: white;
+        text-align: center
+    }
+
+    .profile-pic-sel{
+        background-color: #fff;
+        width: 100%;
+        border-radius: 50%;
+    }
+    
+    .profile-pic-sel:after{
+        content: '';
+        width: 100%;
+        padding-top: 100%;
+        display: inline-block;
+    }
+    
+    .cont-profile-pic-sel{
+        align-items: center;
+    }
+
+    .programas-activos {
+        text-align: center;
+        color: white;
+        font-size: medium;
+        font-weight: 700;
+        border-bottom: 1px solid #ffffff80;
+        padding-bottom: .5rem;
+        margin-top: 0;
+    }
+
+    .lista-metas{
+        display: block;
+        margin-top: .8rem;
+    }
+    .lista-metas ion-row{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.1rem 0;
+    }
+    .lista-metas img{
+        height: 2rem;
+        width: 2rem;
+    }
+    .lista-metas h1{
+        margin: auto;
+        /*font-weight: 700;*/
+        font-size: 0.8em;
+        text-align: left;
+        width: 100%;
+    }
+    .lista-metas  ion-row{
+        border-bottom: solid 1px #fff;
+    }
+    
+    .lista-metas  ion-row:last-child{
+        border-bottom: none;
+    }
+    
+    .lista-metas .next-prev{
+        margin-top: 2rem;
+    }
+
+    .top-secciones {
+        color: white;
+        padding: 1rem .5rem;
+        background-image: linear-gradient(to top right, #7dd4f7, #16254c);
+            ion-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+            font-weight: 700;
+                ion-icon {
+                    font-size: 1.5rem;
+                    margin-right: .5rem;
+                }
+            }
+    }
+
+    .metas-tabla-warp{
+        padding:1rem  0 0 0;
+        margin-bottom: 0;
+        ion-col {
+            padding: 0;
+            ion-list{
+                margin-bottom: 0;
+            }
+        }
+        ion-item {
+            color: #2b9bcb;
+        }
+        ion-label {
+            color: gray;
+            margin: 2rem 0;
+            font-size: smaller;
+        }
+        ion-note {
+            font-weight: 700;
+            font-size: large;
+        }
+       /* .start {
+            color: var(--start);
+        }
+        .middle {
+            color: var(--middle);
+        }
+        .almost {
+            color: var(--almost);
+        }
+        .completed {
+            color: var(--completed);
+        }*/
+    }
+
+    .meta-sesiones .item-content ion-note{
+        float: right;
+        position: absolute;
+        right: 10px;
+        top: 25px;
+        font-size: larger;
+        color: white;
+      }
+    
+    .meta-sesiones .item-content ion-label{
+        padding-left: 2px;
+        padding-top: 4px;
+        text-align: center;
+    }
+    
+    .meta-sesiones ion-icon{
+        position: absolute;
+        top: 1em;
+        font-size: larger;
+        color: white;
+        left: 1em;
+    }
+    
+    .meta-sesiones .dato-meta ion-label {
+        color: gray;
+        font-size: smaller
+    }
+    .meta-sesiones .dato-meta ion-note {
+        color: #4262ab;
+        font-size:small;
+    }
+    
+    .meta-sesiones ion-item{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+}
