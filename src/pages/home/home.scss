@@ -52,6 +52,11 @@ page-home {
         text-align: center
     }
 
+    .lista-mascotas {
+        color: #16254c;
+        text-align: center
+    }
+
     .profile-pic-sel{
         background-color: #fff;
         width: 100%;
@@ -83,35 +88,38 @@ page-home {
         display: block;
         margin-top: .8rem;
     }
-    .lista-metas ion-row{
+    .lista-metas, .lista-mascotas ion-row{
         width: 95%;
         margin-left: auto;
         margin-right: auto;
         padding: 0.1rem 0;
     }
-    .lista-metas img{
-        height: 2rem;
-        width: 2rem;
+    .lista-metas, .lista-mascotas img{
+        height: 6remf;
+        width: 6rem;
     }
-    .lista-metas h1{
+    .lista-metas, .lista-mascotas h1{
         margin: auto;
-        /*font-weight: 700;*/
-        font-size: 0.8em;
+        font-size: 1.4em;
         text-align: left;
         width: 100%;
     }
-    .lista-metas  ion-row{
-        border-bottom: solid 1px #fff;
+    .lista-metas, .lista-mascotas  ion-row{
+        border-bottom: solid 1px #c8c7cc;
     }
     
-    .lista-metas  ion-row:last-child{
+    .lista-metas , .lista-mascotas ion-row:last-child{
         border-bottom: none;
     }
     
-    .lista-metas .next-prev{
+    .lista-metas, .lista-mascotas .next-prev{
         margin-top: 2rem;
     }
 
+    consultas-warp{
+        padding: 0 !important; 
+    }
+    
     .top-secciones {
         color: white;
         padding: 1rem .5rem;
