@@ -1,15 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, ModalController  } from 'ionic-angular';
+import { Component,ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, ModalController, Slides} from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { UserServiceProvider } from '../../providers/user-service/user-service';
 import { TermsPage } from '../terms/terms';
-
-/**
- * Generated class for the RegistroPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @IonicPage()
 @Component({
@@ -17,6 +11,19 @@ import { TermsPage } from '../terms/terms';
   templateUrl: 'registro.html',
 })
 export class RegistroPage {
+
+  @ViewChild(Slides) slides: Slides;
+
+  age: number = 0;
+  birthday: any;
+  register_data = new FormGroup({
+    email: new FormControl(null,[Validators.required, Validators.email]),
+    password: new FormControl(null,Validators.required),
+    cpassword: new FormControl(null,Validators.required),
+    sexo: new FormControl(null,Validators.required),
+    birthday: new FormControl(null,Validators.required),
+    nombre: new FormControl(null,Validators.required)
+  });
 
   public nombresInput : string;
   public apellidosInput : string;
@@ -55,8 +62,26 @@ export class RegistroPage {
       }
     ) 
     }
-    
+  }
 
+  onChangeCheckbox(name,element:Element){
+    /* if(element.getAttribute('type') === 'radio'){
+      document.getElementsByName(name).forEach((el:Element) => {
+        el.classList.remove('checked');
+      });
+    }
+    element.classList.toggle('checked'); */
+    //console.log(this.register_data.value);
+  }
+
+  calculateAge(){
+    var birthday = new Date(this.register_data.value.birthday);
+    var now = new Date();
+    console.log("variable1 " + now.getTime());
+    console.log("variable2 " + birthday.getTime());
+    var diff = now.getTime() - birthday.getTime();
+    this.age = parseInt((diff / (31556926 * 1000)).toString());
+    console.log("EDAD " + this.age);
   }
 
   validaCampos(){
@@ -115,6 +140,10 @@ export class RegistroPage {
 
   cancelar(){
     this.navCtrl.pop();
+  }
+
+  goToStep2() {
+    this.slides.slideTo(1, 500);
   }
 
 

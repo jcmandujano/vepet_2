@@ -1,33 +1,148 @@
-
+<ion-header>
+  <img class="logo" src="../../assets/imgs/LOGO1.png"/>
+</ion-header>
 <ion-content padding >
-    <img class="logo" src="../../assets/imgs/LOGO1.png"/>
-
-      <ion-list class="login-form" no-lines>
-        <ion-item id="rounded">
-          <ion-input placeholder="nombre(s)" type="text" value="" [(ngModel)]="nombresInput"></ion-input>
-        </ion-item>
-        <ion-item id="rounded">
-          <ion-input placeholder="apellidos" type="text" value="" [(ngModel)]="apellidosInput"></ion-input>
-        </ion-item>
-        <ion-item id="rounded">
-            <ion-input placeholder="email" type="email" value="" [(ngModel)]="emailInput"></ion-input>
+  
+  <ion-slides>
+    <ion-slide scrolly>
+      <ion-row class="login-form" >
+        <ion-col col-12>
+          <ion-item id="rounded">
+            <ion-input placeholder="nombre(s)" type="text" value="" [(ngModel)]="nombresInput"></ion-input>
           </ion-item>
           <ion-item id="rounded">
-            <ion-input placeholder="password" type="password" value="" [(ngModel)]="passwordInput"></ion-input>
+            <ion-input placeholder="apellidos" type="text" value="" [(ngModel)]="apellidosInput"></ion-input>
           </ion-item>
-          <ion-item style="border: none !important;" class="check-item">
-            <ion-label style="white-space: normal;">Estoy de acuerdo con los terminos y condiciones.</ion-label>
-            <ion-checkbox color="dark"  [(ngModel)]="terminos" name="acceptTerm"></ion-checkbox>
-          </ion-item>
-      </ion-list>
-      <div class="loginButton">
-        <button ion-button round color="secondary" block (click)="registraUsuario()">Guardar</button>
+          <ion-item id="rounded">
+              <ion-input placeholder="email" type="email" value="" [(ngModel)]="emailInput"></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <div class="loginButton">
+            <button ion-button round color="secondary" block (click)="cancelar()">Cancelar</button>
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="loginButton">
+            <button ion-button round color="secondary" block (click)="goToStep2()">Siguiente</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+    <ion-slide>
+      <ion-row>
+        <ion-col col-6>
+          <label>
+            <img src="../../assets/imgs/male.svg">
+            <h1>Soy Hombre</h1>
+          </label>
+        </ion-col>
+        <ion-col col-6>
+          <label>
+          <img src="../../assets/imgs/female.svg">
+            <h1>Soy Mujer</h1>
+          </label>
+        </ion-col>
+        <ion-col col-6>
+          <div class="loginButton">
+            <button ion-button round color="secondary" block (click)="cancelar()">Cancelar</button>
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="loginButton">
+            <button ion-button round color="secondary" block (click)="goToStep2()">Siguiente</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+    <ion-slide>
+      <ion-row>
+        <ion-col col-12>
+          <h3>Tengo</h3>
+        </ion-col>
+        <ion-col col-12>
+          <h2>{{ age == 0 ? '--' : age }} Años</h2>
+        </ion-col>
+        <ion-col col-6 offset-3>
+          <ion-datetime  name="birthday" (ionChange)="calculateAge()" display-format="DD/MM/YYYY" picker-format="DD MMMM YYYY" placeholder="DD/MM/AAAA"></ion-datetime>
+        </ion-col>
+        <ion-col col-6>
+          <div class="loginButton">
+            <button ion-button round color="secondary" block (click)="cancelar()">Cancelar</button>
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="loginButton">
+            <button ion-button round color="secondary" block (click)="goToStep2()">Siguiente</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+    <ion-slide>
+      <ion-row>
+        <ion-col col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-lg-2 offset-lg-5>
+          <ion-row class="cont-profile-pic-sel" (click)="selectPicture()">
+            <ion-col col-4>
+              <div class="profile-pic-sel" >
+              </div>
+            </ion-col>
+            <ion-col col-8>
+              <ion-row class="txt-image-sel">
+                <ion-col col-10 text-left>
+                  <h3>Sube tu foto</h3>
+                  <p>jpg, png</p>
+                </ion-col>
+                <ion-col col-2>
+                  <img src="assets/images/upload.svg">
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col class="fields-reg-user" col-10 offse-1 col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-lg-2 offset-lg-5>
+          <!--<ion-input placeholder="Contraseña" type="password" formControlName="password" name="password"></ion-input>
+          <ion-input placeholder="Confirmar Contraseña" type="password" formControlName="cpassword" name="cpassword"></ion-input>-->
+        </ion-col>
+        <ion-col col-6>
+            <div class="loginButton">
+              <button ion-button round color="secondary" block (click)="cancelar()">Cancelar</button>
+            </div>
+          </ion-col>
+          <ion-col col-6>
+            <div class="loginButton">
+              <button ion-button round color="secondary" block (click)="goToStep2()">Siguiente</button>
+            </div>
+          </ion-col>
+      </ion-row>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <p class="header-tou">Por favor lee y acepta nuestro Términos de Uso</p>
+        <div scrolly class="terms-of-use">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non feugiat nisi, nec condimentum sem. Nam eget mauris eget elit ornare tristique. Fusce lacinia leo ac dapibus euismod. Curabitur sed augue dui. Morbi dictum fringilla velit, sed eleifend ipsum aliquet vel. Aliquam nec risus ut mauris sagittis faucibus in et nibh. Nam risus eros, placerat vitae augue quis, tincidunt posuere nunc. Nunc eu risus id ante eleifend vestibulum. Morbi tempor laoreet quam a ultricies. Sed ut est diam.</p>
+            <p>Maecenas vehicula varius tempus. Quisque eleifend eros ac consectetur gravida. Suspendisse consectetur bibendum felis, id ultricies odio congue a. Nunc blandit ligula at arcu eleifend, a tempor augue tempus. Proin suscipit enim eget augue lobortis, at dignissim leo venenatis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin volutpat, tellus ut tincidunt dapibus, velit erat pharetra nunc, at vehicula nunc augue eu neque. Vivamus sem massa, commodo quis ullamcorper eu, tempus at diam. Duis vitae rhoncus orci, non cursus ex.</p>
+            <p>Pellentesque vitae eleifend magna, ut varius sem. Sed feugiat nulla urna, a vehicula enim lobortis at. Donec non semper dui. Pellentesque in ipsum pretium, cursus sapien maximus, sollicitudin ex. Proin vitae dolor ut mi iaculis maximus. Curabitur bibendum, urna eu congue interdum, turpis enim dictum felis, quis molestie libero sapien ut ex. Sed nisi metus, tristique vitae convallis ut, tempus a magna. Aenean sit amet malesuada arcu. Nam finibus nisl quis ultricies molestie. Sed eget urna laoreet, bibendum enim vitae, molestie mi. Maecenas lobortis urna non tristique eleifend. Nunc sit amet porttitor lacus, sollicitudin semper nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Aenean pharetra eget mauris sed sagittis. Nunc a dolor magna. Suspendisse faucibus convallis metus, et luctus diam volutpat vel. Maecenas eu ligula ac odio rhoncus iaculis vitae pellentesque libero. Phasellus vitae rutrum tellus, elementum iaculis nisl. Duis ac lectus a nisl cursus pharetra eget vel ligula. Nullam ac lorem et metus cursus tincidunt a quis lorem. Proin eleifend faucibus tellus sit amet semper.</p>
+            <p>Etiam tristique faucibus vestibulum. Fusce purus odio, vulputate ut augue id, lobortis sodales tortor. Nam placerat malesuada leo non auctor. Mauris sit amet consequat magna. Vivamus a dolor tincidunt, maximus odio sed, viverra lectus. Morbi nisi urna, congue non ante ut, pretium convallis purus. Vestibulum lorem turpis, semper gravida malesuada lobortis, mattis vel enim. Vivamus tincidunt massa pellentesque, dapibus mi non, molestie tellus. Nulla cursus imperdiet risus et porttitor. Donec ut turpis ante. Nulla sed augue at erat vulputate porta vitae vel mauris. Ut id magna id est viverra pellentesque. Cras quis justo vitae lacus malesuada consequat et sit amet felis. Maecenas porta, turpis at cursus laoreet, urna dui finibus nunc, quis tincidunt orci mauris quis magna. Aliquam massa sapien, rutrum eget ligula condimentum, accumsan posuere felis.</p>
+            <p>Suspendisse lacinia sagittis orci quis rutrum. Duis pretium, ipsum id condimentum tincidunt, arcu orci iaculis ligula, vel ullamcorper orci tortor vitae ipsum. Ut eleifend varius tempus. Praesent ullamcorper tempor suscipit. Proin nec nulla et ante mollis tincidunt. Sed mattis leo vel nulla porta, vel tincidunt purus condimentum. Phasellus vehicula dui vitae metus viverra, eu consectetur risus posuere. Etiam sit amet mattis tortor. Pellentesque eu dapibus lorem. Nullam aliquet metus quis maximus venenatis. Cras lacus est, euismod et ante non, fringilla condimentum arcu. Maecenas elementum lectus eu semper fringilla. Maecenas egestas nunc et vehicula facilisis. Aenean scelerisque lectus vel libero aliquet accumsan. Ut sed elit purus. Donec vitae eleifend lectus.</p>
+            <p>Integer pellentesque leo id leo varius tempus. Nulla non eros lacus. Nullam ut enim quis ligula mollis maximus at vitae quam. Praesent consectetur sapien sed ligula hendrerit fermentum. Nullam sit amet interdum lectus. Praesent non gravida turpis, et tempus ante. Curabitur volutpat pulvinar erat cursus ullamcorper. Integer mi ligula, condimentum id ligula nec, dignissim efficitur nulla. Etiam hendrerit quis leo at pellentesque. Donec suscipit quam eu mattis viverra. Proin blandit enim in porta facilisis. Donec viverra luctus ornare. Donec suscipit volutpat feugiat. Quisque vitae vestibulum purus, et fringilla ante.</p>
+            <p>Nam eu sollicitudin velit. Aenean non justo at quam pretium egestas hendrerit vel lacus. Nullam sed nibh ultrices, lobortis elit nec, vestibulum sem. Pellentesque ut lorem eros. Aliquam congue justo non ligula tincidunt, faucibus euismod tortor sodales. Maecenas sollicitudin orci et tempus hendrerit. Praesent faucibus non orci eget sagittis. Praesent vitae arcu nec quam finibus auctor a sit amet purus. Duis convallis rutrum ex, vitae porta libero hendrerit et. Aenean gravida ultricies sem. Vivamus vitae lacus sit amet lacus aliquam commodo. Cras sem lectus, fermentum at facilisis nec, mollis et quam. Morbi fermentum eu purus fringilla vulputate. Duis vitae dolor et dolor blandit elementum eget sed metus. Praesent magna nisi, convallis ac posuere vitae, suscipit id arcu.</p>
+            <p>Proin sodales facilisis ante eget accumsan. Nulla vitae tortor vitae erat suscipit pharetra. Etiam a nulla turpis. Nunc nec ex a elit ultricies pulvinar. Vestibulum at fermentum magna. Pellentesque volutpat aliquam ex, a dapibus ligula tincidunt vitae. Duis eu elit commodo, sodales nisi in, posuere lorem. In vitae lacus in nisi cursus faucibus. Nulla id blandit risus, a finibus dui. Sed sit amet accumsan nisl, eget hendrerit lectus. Ut ut leo in quam molestie malesuada ut ornare elit. Quisque vitae aliquam nisi.</p>
+            <p>Phasellus id pulvinar libero, at sollicitudin nisi. Sed semper maximus leo posuere laoreet. Sed aliquam lectus facilisis, condimentum quam auctor, fringilla nulla. Pellentesque in maximus velit. Donec vitae pellentesque neque. Donec nec feugiat dolor. Aliquam erat volutpat. Ut in magna mi. Ut congue non ante eget sagittis.</p>
+        </div>
+        <ion-row>
+          <ion-col col-6>
+            <div class="loginButton">
+              <button ion-button round color="secondary" block (click)="cancelar()">Cancelar</button>
+            </div>
+          </ion-col>
+          <ion-col col-6>
+            <div class="loginButton">
+              <button ion-button round color="secondary" block (click)="goToStep2()">Siguiente</button>
+            </div>
+          </ion-col>
+        </ion-row>
       </div>
-  
-      <div class="loginButton">
-        <button ion-button round color="secondary" block (click)="cancelar()" >Cancelar</button>
-      </div>
-
-      <button ion-button full color="secondary" class="but-opt mt-neg" clear (click)="abrirTerminos()">Terminos y condiciones</button>
-    
-  </ion-content>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
